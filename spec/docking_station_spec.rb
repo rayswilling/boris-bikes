@@ -21,4 +21,13 @@ describe DockingStation do
     bike = ds.release_bike
     expect(ds.dock(bike)).to eq('Bike docked')
   end
+
+  it 'lists docked bikes' do
+    ds = DockingStation.new
+    bike = ds.release_bike
+    ds.dock(bike)
+    expect(ds.list_bikes).to eq([bike])
+  end
+
+  
 end
