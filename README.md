@@ -46,3 +46,11 @@ I'd like docking stations not to accept more bikes than their capacity.
 maintainer
 docking_station - not accept
 bikes
+
+As a system maintainer,
+So that I can plan the distribution of bikes,
+I want a docking station to have a default capacity of 20 bikes.
+
+maintainer
+bikes
+docking_station - have default capacity 20

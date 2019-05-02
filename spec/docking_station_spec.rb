@@ -37,11 +37,12 @@ describe DockingStation do
     expect{ds.release_bike}.to raise_error ('no bikes')
   end
 
-  it 'gives an error when docking station is full' do
+  it 'gives an error when docking station is full at 20' do
     ds = DockingStation.new
-    bike = Bike.new
-    bike2 = Bike.new
-    ds.dock(bike)
-    expect{ds.dock(bike2)}.to raise_error ('docking station full')
+    20.times do
+      ds.dock(Bike.new)
+    end
+    expect{ds.dock(Bike.new)}.to raise_error ('docking station full')
   end
+
 end

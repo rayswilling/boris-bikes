@@ -18,10 +18,18 @@ class DockingStation
   end
 
   def dock(bike)
-    raise 'docking station full' unless bikes.length == 0
+    puts bikes.length
+    #raise 'docking station full' if bikes.length == 20
+    raise 'docking station full' unless full?
     bikes << bike
     "Bike docked"
   end
+
+private
+  def full?
+    bikes.length < 20
+  end
+public
 
   def list_bikes
     bikes
