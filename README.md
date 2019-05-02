@@ -30,3 +30,11 @@ So I can decide whether to use the docking station
 I want to see a bike that has been docked
 
 docking_station - bikes_available?
+
+As a member of the public,
+So that I am not confused and charged unnecessarily,
+I'd like docking stations not to release bikes when there are none available.
+
+customer
+docking_station - don't release bike if there are none
+bike
