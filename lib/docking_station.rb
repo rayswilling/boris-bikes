@@ -18,6 +18,7 @@ class DockingStation
   end
 
   def dock(bike)
+    raise 'docking station full' unless bikes.length == 0
     bikes << bike
     "Bike docked"
   end

@@ -38,3 +38,11 @@ I'd like docking stations not to release bikes when there are none available.
 customer
 docking_station - don't release bike if there are none
 bike
+
+As a maintainer of the system,
+So that I can control the distribution of bikes,
+I'd like docking stations not to accept more bikes than their capacity.
+
+maintainer
+docking_station - not accept
+bikes
