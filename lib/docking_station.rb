@@ -6,11 +6,15 @@ class DockingStation
   end
 
   def release_bike
-    if bikes.empty?
-      raise 'no bikes'
-    else
-      Bike.new
-    end
+    raise 'no bikes' unless bikes.length > 0
+    Bike.new
+
+    # replaced with the above guard clause ^
+    # if bikes.empty?
+    #   raise 'no bikes'
+    # else
+    #   Bike.new
+    # end
   end
 
   def dock(bike)
