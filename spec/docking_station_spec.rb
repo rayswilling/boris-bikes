@@ -57,7 +57,4 @@ DEFAULT_CAPACITY = 20
     end
     expect{ds.dock(Bike.new)}.to raise_error ('docking station full')
   end
-
-
-
 end
