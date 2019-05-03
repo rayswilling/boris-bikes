@@ -38,6 +38,10 @@ DEFAULT_CAPACITY = 20
     expect{ds.release_bike}.to raise_error ('no bikes')
   end
 
+  it "has a default capacity of 20" do
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  end
+
   it 'gives an error when docking station is full at 20' do
     ds = DockingStation.new
     DEFAULT_CAPACITY.times do
@@ -45,5 +49,15 @@ DEFAULT_CAPACITY = 20
     end
     expect{ds.dock(Bike.new)}.to raise_error ('docking station full')
   end
+
+  it "has a assigned capacity" do
+    ds = DockingStation.new(50)
+    50.times do
+      ds.dock(Bike.new)
+    end
+    expect{ds.dock(Bike.new)}.to raise_error ('docking station full')
+  end
+
+
 
 end

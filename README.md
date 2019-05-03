@@ -54,3 +54,11 @@ I want a docking station to have a default capacity of 20 bikes.
 maintainer
 bikes
 docking_station - have default capacity 20
+
+As a system maintainer,
+So that busy areas can be served more effectively,
+I want to be able to specify a larger capacity when necessary.
+
+maintainer
+docking station - larger capacity 
+specify
