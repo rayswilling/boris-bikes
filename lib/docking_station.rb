@@ -1,4 +1,6 @@
 class DockingStation
+DEFAULT_CAPACITY = 20
+
   attr_reader :bikes
 
   def initialize
@@ -6,7 +8,7 @@ class DockingStation
   end
 
   def release_bike
-    raise 'no bikes' unless bikes.length > 0
+    raise 'no bikes' unless empty?
     Bike.new
 
     # replaced with the above guard clause ^
@@ -16,6 +18,12 @@ class DockingStation
     #   Bike.new
     # end
   end
+
+private
+  def empty?
+    bikes.length > 0
+  end
+public
 
   def dock(bike)
     puts bikes.length
@@ -27,7 +35,7 @@ class DockingStation
 
 private
   def full?
-    bikes.length < 20
+    bikes.length < DEFAULT_CAPACITY
   end
 public
 

@@ -1,6 +1,7 @@
 require 'docking_station'
 
 describe DockingStation do
+DEFAULT_CAPACITY = 20
   # it 'does it release' do
   #   ds = DockingStation.new
   #   expect(ds.release_bike).to eq(true)
@@ -39,7 +40,7 @@ describe DockingStation do
 
   it 'gives an error when docking station is full at 20' do
     ds = DockingStation.new
-    20.times do
+    DEFAULT_CAPACITY.times do
       ds.dock(Bike.new)
     end
     expect{ds.dock(Bike.new)}.to raise_error ('docking station full')
